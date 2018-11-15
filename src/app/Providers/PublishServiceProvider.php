@@ -26,5 +26,9 @@ class PublishServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../config/env-corner-component.php' => config_path('env-corner-component.php'),
         ]);
+
+        $this->publishes([
+            __DIR__.'/../../resources/views/components/corner.blade.php' => resource_path('views/components/vendor/corner.blade.php'),
+        ]);
     }
 }

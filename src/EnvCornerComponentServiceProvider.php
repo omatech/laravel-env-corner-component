@@ -2,6 +2,8 @@
 namespace Omatech\EnvCornerComponent;
 
 use Illuminate\Support\ServiceProvider;
+use Omatech\EnvCornerComponent\App\Providers\ConfigurationServiceProvider;
+use Omatech\EnvCornerComponent\App\Providers\PublishServiceProvider;
 
 class EnvCornerComponentServiceProvider extends ServiceProvider
 {
@@ -35,5 +37,7 @@ class EnvCornerComponentServiceProvider extends ServiceProvider
 
     private function providers()
     {
+        $this->app->register(ConfigurationServiceProvider::class);
+        $this->app->register(PublishServiceProvider::class);
     }
 }
